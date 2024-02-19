@@ -1,0 +1,373 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  overflow-x: hidden;
+}
+
+.title-background {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  color: #ffffff;
+}
+
+.title-content {
+  text-align: center;
+}
+
+.title {
+  font-size: 4em;
+  margin: 0; 
+}
+
+.subtext {
+  font-size: 1.2rem;
+  margin: 20px;
+  color: #b2befa;
+  max-width: 600px;
+}
+
+#titlelinktext, #titlelink {
+  margin-top: 0vh;
+  text-decoration: none;
+  color: #b2befa;
+}
+
+#titlelink:hover {
+  font-weight: bold;
+  color: #ffffff;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.entry-button {
+  margin-top: 20px;
+  padding: 12px 28px;
+  background-color: #2575fc;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.entry-button:hover {
+  color: #b2befa;
+  background-color: #ffffff;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.select-team-display {
+  background-color: #eeeeee;
+  width: 100%;
+  min-height: 100vh;
+  box-shadow: 0 -5px 10px rgba(0,0,0,0.1);
+  color: black;
+}
+
+.bigtext {
+  font-size: 2em;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  color: #5c77ff;
+}
+
+.team-display {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap; 
+  transition: all 1s ease-in-out;
+}
+
+.player {
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  padding-top: 5px;
+  height: 52vh;
+  min-width: 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+}
+
+#search-player {
+  margin-top: 2vh;
+}
+
+.stats{
+  text-align: center;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  padding: 2vh;
+}
+
+.standard-button {
+  padding: 10px 25px;
+  background-color: #5c77ff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.standard-button:hover {
+  background-color: #5c77ff;
+}
+
+#result:hover {
+  color: #5c77ff;
+  cursor: pointer;
+}
+
+.submit-teams {
+  margin: 1vw;
+  padding: 1em 5em;
+  border-radius: 40px;
+}
+
+#change-player {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+@keyframes slideOutLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slide-out-left {
+  animation: slideOutLeft 0.5s forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.5s forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.5s forwards;
+}
+
+.slide-out-right {
+  animation: slideOutRight 0.5s forwards;
+}
+
+.comparison-display {
+  background: linear-gradient(135deg, #975bd8 0%, #6e9ceb 100%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.team1-display, .team2-display {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  align-items: center;
+}
+
+.team1-player, .team2-player {
+  display: flex;
+  padding: 2vh;
+  /* max-height: 15vh; */
+}
+
+.team1-player {
+  margin-left: 20px;
+  flex-direction: row;
+  text-align: left;
+  justify-content: flex-start;
+  font-size: 1.2em;
+}
+
+.team2-player {
+  margin-right: 20px;
+  flex-direction: row-reverse;
+  text-align: right;
+  justify-content: flex-end;
+  font-size: 1.2em;
+}
+
+.player-headshot {
+  height: 15vh;
+  width: 10vh;
+  border-radius: 40px;
+}
+
+.team1-player-info, .team2-player-info {
+  color: black;
+  font-weight: bold;
+  min-width: 20vw;
+  min-height: 10vh;
+}
+
+.team1-player-info {
+  margin-left: 20px;
+}
+
+.team2-player-info {
+  margin-right: 20px;
+}
+
+.player-stats {
+  font-weight: normal;
+}
+
+.headtohead {
+  min-width: 20vw;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.stat-title {
+  padding-left: 1vw;
+  padding-right: 1vw;
+  color: black;
+  font-weight: bold;
+  font-size: 1.8em;
+}
+
+.team-totals {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.team-stat {
+  margin: 1vh;
+  margin-top: -2vh;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  font-size: 1.5em;
+  color: black;
+}
+
+.team-stat.more {
+  background-color: rgb(5, 168, 5);
+}
+
+.infographs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobileWarning {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.75);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.mobileWarning p {
+  font-size: 18px;
+  padding: 20px;
+  text-align: center;
+}
+
+.news {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.1em;
+  max-width: 30vw;
+  max-height: fit-content;
+}
+
+.news p {
+  color: black;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.news a {
+  text-decoration: none;
+  color: black;;
+  max-height: 10vh;
+  transition: all 0.3s ease;
+}
+
+.news a:hover {
+  color: #324185;
+}
+
+.standard-button-news {
+    padding: 5px 15px;
+    background-color: #5c77ff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    max-height: 10vh;
+    margin: 5px 10px 0px;
+  }
+
+  .standard-button-news:hover {
+    background-color: #5c77ff;
+  }
