@@ -255,9 +255,9 @@ html {
     padding-top: 0px;
     height: 210px;
     width: 230px;
-    margin: 1vh 0 1vh 0;
+    margin: 1vh 0 0vh 0;
   }
-
+  
   .headshot-and-stats {
     margin-left: 0px;
     display: flex;
@@ -295,7 +295,6 @@ html {
     color: white;
     border: none;
     border-radius: 20px;
-    font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
@@ -315,8 +314,12 @@ html {
 
   .search-box {
     width: 150px;
-    margin-left: -20px;
+    margin-left: -10px;
   }
+
+  .button-container {
+  padding: 1vh;
+}
 }
 
 .comparison-display {
