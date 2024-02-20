@@ -169,7 +169,7 @@ const SearchPlayer = ({ playerData, setTeams, playerIndex, currentTeam }) => {
           setQuery={setQuery}
           handleSearch={handleSearch}
         />
-        {search && <p>Loading players...</p>}
+        {search && <p className='headshot-and-stats'>Loading players...</p>}
         {results.length > 0 && (
           <SearchResults
             results={results}

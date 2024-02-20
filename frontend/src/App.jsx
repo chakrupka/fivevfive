@@ -22,6 +22,10 @@ const App = () => {
   const [showResults, setShowResults] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
 
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual"
+  }
+
   // Scroll results into view after Submit button is pressed
   useEffect(() => {
     if (showResults) {
@@ -50,8 +54,8 @@ const App = () => {
 
         setTimeout(() => {
           setAnimationClass("")
-        }, 500)
-      }, 500)
+        }, 510)
+      }, 510)
     } else {
       setAnimationClass("slide-in-left")
 
@@ -60,8 +64,8 @@ const App = () => {
 
         setTimeout(() => {
           setAnimationClass("")
-        }, 500)
-      }, 500)
+        }, 490)
+      }, 490)
     }
 
     setTimeout(() => {
@@ -121,7 +125,10 @@ const App = () => {
           />
         </div>
         <div className='button-container'>
-          <button className='standard-button' onClick={handleNextTeam}>
+          <button
+            className='standard-button change-team'
+            onClick={handleNextTeam}
+          >
             {currentTeam === "teamOne" ? "Next Team →" : "← Previous Team"}
           </button>
         </div>
