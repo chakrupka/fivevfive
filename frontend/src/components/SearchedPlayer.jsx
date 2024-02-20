@@ -10,38 +10,44 @@ const SearchedPlayer = ({ selectedPlayer, changePlayer }) => {
   // Unpack player information into HTML elements
   return (
     <div className='player'>
-      <p>
-        {selectedPlayer.playerInfo.firstname}{" "}
-        {selectedPlayer.playerInfo.lastname}
-      </p>
-      <img src={selectedPlayer.playerHeadshot}></img>
-      <div className='stats'>
-        {selectedPlayer.playerStats ? (
-          <div>
-            <p>Season Stats</p>
-            <p>
-              {selectedPlayer.playerStats["PTS"]} /{" "}
-              {selectedPlayer.playerStats["AST"]} /{" "}
-              {selectedPlayer.playerStats["REB"]}
-            </p>
-            <p>Shooting Splits</p>
-            <p>
-              {selectedPlayer.playerStats["FG_PCT"]} /{" "}
-              {selectedPlayer.playerStats["FG3_PCT"]} /{" "}
-              {selectedPlayer.playerStats["FT_PCT"]}
-            </p>
-          </div>
-        ) : (
-          <p>Loading data...</p>
-        )}
+      <div>
+        <p className='name'>
+          {selectedPlayer.playerInfo.firstname}{" "}
+          {selectedPlayer.playerInfo.lastname}
+        </p>
+      </div>
+      <div className='headshot-and-stats'>
+        <img
+          src={selectedPlayer.playerHeadshot}
+          className='headshot-search'
+        ></img>
+        <div className='stats'>
+          {selectedPlayer.playerStats ? (
+            <>
+              <p style={{}}>Season Stats</p>
+              <p>
+                {selectedPlayer.playerStats["PTS"]} /{" "}
+                {selectedPlayer.playerStats["AST"]} /{" "}
+                {selectedPlayer.playerStats["REB"]}
+              </p>
+              <p>Shooting Splits</p>
+              <p>
+                {selectedPlayer.playerStats["FG_PCT"]} /{" "}
+                {selectedPlayer.playerStats["FG3_PCT"]} /{" "}
+                {selectedPlayer.playerStats["FT_PCT"]}
+              </p>
+            </>
+          ) : (
+            <p>Loading data...</p>
+          )}
+        </div>
       </div>
       {selectedPlayer.playerStats && (
         <button
-          className='standard-button'
-          id='change-player'
+          className='standard-button change-player'
           onClick={changePlayer}
         >
-          Change
+          🅧
         </button>
       )}
     </div>

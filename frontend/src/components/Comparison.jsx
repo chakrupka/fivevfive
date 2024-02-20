@@ -10,7 +10,7 @@ import RecentNews from "./RecentNews"
  * @param {Object} teams - The teams data.
  * @returns {JSX.Element} Comparison component.
  */
-const Comparison = ({ teams }) => {
+const Comparison = ({ teams, isMobile }) => {
   // Intialize state hook: teamsData holds data for both teams
   const [teamsData, setTeamsData] = useState({})
 

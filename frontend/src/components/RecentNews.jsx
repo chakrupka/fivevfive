@@ -79,7 +79,7 @@ const RecentNews = ({ teams }) => {
   if (news.length > 0) {
     return (
       <div className='news'>
-        <p>In the news: {news[newsIndex].key}</p>
+        <p>In the news:</p>
         <a href={news[newsIndex].playerNews.url}>
           {news[newsIndex].playerNews.title}
         </a>

@@ -15,30 +15,41 @@ const ComparedPlayer = ({ teams, currentTeam }) => {
   const teamNumber = currentTeam === "teamOne" ? 1 : 2
 
   return (
-    <div className={`team${teamNumber}-display`}>
-      {teamData.map((player, index) => (
-        <div
-          key={`comp-team-${teamNumber}-player-${index}`}
-          className={`team${teamNumber}-player`}
-        >
-          <img className='player-headshot' src={player.playerHeadshot}></img>
-
-          <div className={`team${teamNumber}-player-info`}>
-            {player.playerInfo.firstname} {player.playerInfo.lastname}
-            <div className='player-stats'>
-              <p>
-                {player.playerStats["PTS"]} / {player.playerStats["AST"]} /{" "}
-                {player.playerStats["REB"]}
-              </p>
-
-              <p>
-                {player.playerStats["FG_PCT"]} / {player.playerStats["FG3_PCT"]}{" "}
-                / {player.playerStats["FT_PCT"]}
-              </p>
+    <div className={`results-display`}>
+      {document.documentElement.clientWidth > 500
+        ? teamData.map((player, index) => (
+            <div
+              key={`comp-team-${teamNumber}-player-${index}`}
+              className={`team${teamNumber}-player`}
+            >
+              <img
+                className='player-headshot'
+                src={player.playerHeadshot}
+                alt={`${player.playerInfo.firstname} ${player.playerInfo.lastname}`}
+              ></img>
+              <div className={`team${teamNumber}-player-info`}>
+                {player.playerInfo.firstname} {player.playerInfo.lastname}
+                <div className='player-stats'>
+                  <p>
+                    {player.playerStats["PTS"]} / {player.playerStats["AST"]} /{" "}
+                    {player.playerStats["REB"]}
+                  </p>
+                  <p>
+                    {player.playerStats["FG_PCT"]} /{" "}
+                    {player.playerStats["FG3_PCT"]} /{" "}
+                    {player.playerStats["FT_PCT"]}
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      ))}
+          ))
+        : teamData.map((player, index) => (
+            <img
+              key={`comp-team-${teamNumber}-player-${index}`}
+              className='player-headshot'
+              src={player.playerHeadshot}
+            ></img>
+          ))}
     </div>
   )
 }

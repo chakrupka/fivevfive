@@ -9,13 +9,16 @@
  */
 const PlayerSearchForm = ({ query, setQuery, handleSearch }) => (
   <form onSubmit={handleSearch}>
-    <div id='search-player'>
+    <div className='search-player'>
       <input
+        className='search-box'
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder='Last name...'
       ></input>
-      <button type='submit'>Search</button>
+      <button type='submit' className='standard-button search'>
+        Search
+      </button>
     </div>
   </form>
 )

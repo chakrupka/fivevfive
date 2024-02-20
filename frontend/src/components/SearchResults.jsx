@@ -8,14 +8,14 @@
  */
 const SearchResults = ({ results, setSelectedPlayer }) => {
   return (
-    <div>
+    <div className='results'>
       {results.map(
         (player, index) => (
           console.log(player),
           (
             <p
               key={index}
-              id='result'
+              className='result'
               onClick={() => setSelectedPlayer({ playerInfo: player })}
             >
               {player.firstname} {player.lastname}
