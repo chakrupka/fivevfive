@@ -465,8 +465,8 @@ html {
   }
 
   .player-headshot {
-    height: 120px;
-    width: 80px;
+    height: 100px;
+    width: 100%;
     border-radius: 20px;
     margin-bottom: 3vh;
   }
