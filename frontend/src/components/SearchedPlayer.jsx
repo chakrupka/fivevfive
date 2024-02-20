@@ -47,7 +47,7 @@ const SearchedPlayer = ({ selectedPlayer, changePlayer }) => {
           className='standard-button change-player'
           onClick={changePlayer}
         >
-          🅧
+          🗑️
         </button>
       )}
     </div>
