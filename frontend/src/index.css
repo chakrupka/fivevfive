@@ -161,12 +161,17 @@ html {
 }
 
 .results {
+  margin-top: 5px;
   width: 250px;
   text-align: center;
   overflow: scroll;
 }
 
-.result:hover {
+.results p {
+  margin: 5px;
+}
+
+.results p:hover {
   color: #5c77ff;
   cursor: pointer;
 }
@@ -211,9 +216,8 @@ html {
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: space-evenly;
-    max-height: 60vh;
-    overflow: scroll;
     align-items: center;
+    overflow: scroll;
   }
 
   .player {
@@ -221,7 +225,7 @@ html {
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    height: 165px;
+    height: 150px;
     width: 310px;
     padding: 0px 0px 15px 5px;
     margin: 0.5vh 0 1vh 0;
@@ -245,6 +249,7 @@ html {
 
   .stats {
     margin: 0px 10px -15px;
+    font-size: 15px;
   }
 
   .loading-data {
@@ -258,7 +263,7 @@ html {
   }
 
   .search-box {
-    width: 210px;
+    width: 180px;
     /* margin-left: 10px; */
   }
 

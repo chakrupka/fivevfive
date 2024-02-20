@@ -15,7 +15,6 @@ const SearchResults = ({ results, setSelectedPlayer }) => {
           (
             <p
               key={index}
-              className='result'
               onClick={() => setSelectedPlayer({ playerInfo: player })}
             >
               {player.firstname} {player.lastname}
