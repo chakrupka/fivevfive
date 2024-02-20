@@ -21,7 +21,6 @@ const App = () => {
   const [animationClass, setAnimationClass] = useState("")
   const [showResults, setShowResults] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
-  const [warningDismissed, setWarningDismissed] = useState(false)
 
   // Scroll results into view after Submit button is pressed
   useEffect(() => {
@@ -82,11 +81,6 @@ const App = () => {
     setShowResults(true)
   }
 
-  // Dismiss warning
-  const dismissWarning = () => {
-    setWarningDismissed(true)
-  }
-
   // Autofill teams with pre-selected team
   const autofill = () => {
     fillTeams(setTeams, setCurrentTeam)
@@ -95,14 +89,6 @@ const App = () => {
   // Main content
   return (
     <div>
-      {isMobile && !warningDismissed && (
-        <div className='mobileWarning'>
-          <p>This website is best viewed on a desktop.</p>
-          <button onClick={dismissWarning} className='standard-button'>
-            Dismiss
-          </button>
-        </div>
-      )}
       <div className='title-background'>
         <div className='title-content'>
           <b className='title'>Comparing Five</b>
