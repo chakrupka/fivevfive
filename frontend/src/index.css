@@ -255,7 +255,7 @@ html {
     padding-top: 0px;
     height: 210px;
     width: 230px;
-    margin: 1vh 0 0vh 0;
+    margin: 1vh 0 1vh 0;
   }
   
   .headshot-and-stats {
@@ -284,9 +284,7 @@ html {
   }
 
   .button-container {
-    display: flex;
-    justify-content: center;
-    padding: 2vh;
+    padding: -1vh 2vh 2vh
   }
 
   .standard-button {
@@ -308,7 +306,7 @@ html {
   }
 
   .standard-button.submit-teams {
-    margin: -10px 10px 10px;
+    margin: 10px 10px 10px;
     padding: 10px 30px 10px;
   }
 
@@ -316,10 +314,6 @@ html {
     width: 150px;
     margin-left: -10px;
   }
-
-  .button-container {
-  padding: 1vh;
-}
 }
 
 .comparison-display {
